@@ -12,7 +12,6 @@ Q:
 import unittest
 
 def rearrange(array):
-	# max  = len(array)
 	p = 0
 	for i in range(0, len(array)):
 		cur = array[p]
@@ -20,16 +19,19 @@ def rearrange(array):
 			array.append(cur)
 			del array[p]	
 		else:
-			# if p > 0:
-			# array[p] = cur				
 			p += 1
-		
-	print(array)
+	return array
+	
+class Test(unittest.TestCase):
+	def test(self):
+		self.assertEqual(rearrange([-1, 1, 3, -2, 2]), [-1, -2, 1, 3, 2])
+		self.assertEqual(rearrange([1, -3, 4, 2, -4, 5]), [-3, -4, 1, 4, 2, 5])
+		self.assertEqual(rearrange([1, -3, 4, 2, -4, 0]), [-3, -4, 1, 4, 2, 0])
+		self.assertEqual(rearrange([1, -3, 4, 0, 2, -4]), [-3, -4, 1, 4, 0, 2])
+		self.assertEqual(rearrange([-1 ,1 ,3 ,-2, -5, 2]), [-1, -2, -5, 1, 3, 2])
 
-rearrange([-1, 1, 3, -2, 2])
-rearrange([1, -3, 4, 2, -4, 5])
-rearrange([1, -3, 4, 2, -4, 0])
-rearrange([1, -3, 4, 0, 2, -4])
+if __name__ == "__main__":
+	unittest.main()
 
 
 
