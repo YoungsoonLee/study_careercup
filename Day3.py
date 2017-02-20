@@ -27,10 +27,7 @@ def getElementywithK(array, k=None):
 		#print(dic)
 		# it's okay there is blow code or not				
 		for key, value in dic.items():
-			
-			if array.index(value):
-				result += '(%i , %i)' % (key, value)
-		
+			result += '(%i , %i)' % (key, value)
 		return result
 
 
