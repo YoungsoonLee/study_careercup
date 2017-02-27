@@ -19,7 +19,7 @@ def n3solution(n=None):
 			result = pow(c, 3)+pow(d, 3)
 			dic[result] = [c, d]
 			# print(c,d, result)
-	print(dic)
+	# print(dic)
 	for result, value in dic.items():
 		print('(%i, %i) = (%i, %i) , result: %i' %(value[0],value[1],value[0],value[1],result))
 
