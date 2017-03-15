@@ -13,9 +13,6 @@
 		Your solution should run in O(log n) time and O(1) space.
 """
 
-
-
-
 """
 #  this is not answer because not O(log n)
 def findOneElement(array):
@@ -44,8 +41,7 @@ def findOneEl(nums):
 		else:
 			high = mid -1
 	return nums[low]
-
-
+"""
 
 def findOneElementByBinarySearch(array):
 	 return dfs(array,0,len(array)-1)
@@ -58,7 +54,7 @@ def dfs(nums,start,end):
         l=int((end-start)/2)
         r=int((end-start)/2)
 
-        print(m,l,r)
+        # print(m,l,r)
 
         if nums[m]==nums[m+1]:
             r+=1
@@ -66,17 +62,15 @@ def dfs(nums,start,end):
             l+=1
         else:
             return nums[m]
-        print(l%2, l, r, start, end)
+        print(m, l, r, start, end, l%2)
         if l%2==0:
             return dfs(nums,end-r+1,end)
         else:
             return dfs(nums,start,start+l-1)
-"""
-
 
 if __name__ == '__main__':
 	a = [1,1,2,3,3,4,4,8,8]
-	print(findOneEl(a))
+	print(findOneElementByBinarySearch(a))
 	b = [3,3,7,7,10,11,11]
-	print(findOneEl(b))
+	print(findOneElementByBinarySearch(b))
 
