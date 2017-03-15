@@ -53,29 +53,23 @@ def rearrange(array, n):
 rearrange(['a1','a2','a3','a4','b1','b2','b3','b4'], 4)
 """
 
+
 def gen_arr(size):
     arr = []
     for i in range(size):
-        arr.append('a%s'%(i+1))
+        arr.append('a%s' % (i + 1))
     for i in range(size):
-        arr.append('b%s'%(i+1))
+        arr.append('b%s' % (i + 1))
     return arr
 size = 4
 arr = gen_arr(size)
 
 index = size
 while index < len(arr):
-	#print(index)
-	#print(size)
-	arr.insert( ((index-size)*2)+1, arr[index])	
-	index += 1
-	del arr[index]
+        # print(index)
+        # print(size)
+    arr.insert(((index - size) * 2) + 1, arr[index])
+    index += 1
+    del arr[index]
 
-#print(arr)
-
-
-
-
-
-
-
+# print(arr)

@@ -57,11 +57,11 @@ def removeElement2(nums, val):
 
 
 if __name__ == "__main__":
-    #a = [3, 2, 2, 3]
+    a = [3, 2, 2, 3]
     #a = [3, 2, 2, 3,4,4,5]
-    #val = 3
-    a = [4, 5]
-    val = 4
+    val = 3
+    #a = [4, 5]
+    #val = 4
     # print(s.removeElement(a, val))
     #removeElement_firstSort(a, val)
     print(removeElement2(a, val))
