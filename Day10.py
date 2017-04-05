@@ -62,7 +62,9 @@ def dfs(nums,start,end):
             l+=1
         else:
             return nums[m]
+        
         print(m, l, r, start, end, l%2)
+        
         if l%2==0:
             return dfs(nums,end-r+1,end)
         else:
